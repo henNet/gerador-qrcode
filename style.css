@@ -2,6 +2,7 @@
 
 * {
   font-family: "Roboto";
+  /* color: #343b61; */
 }
 
 header {
@@ -9,6 +10,7 @@ header {
   text-align: center;
   padding: 1rem;
   color: #343b61;
+  font-weight: bold;
 }
 
 input {
@@ -26,5 +28,9 @@ input {
   padding: 2rem;
   display: flex;
   justify-content: center;
-  /* background-color: #343b61; */
+}
+
+.btnSalvar {
+  display: flex;
+  justify-content: center;
 }

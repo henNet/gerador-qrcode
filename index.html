@@ -15,6 +15,15 @@
       <button id="btnLimpar" onclick="limparQrCode()" disabled>Limpar</button>
     </div>
     <div class="qrcode"></div>
+    <div class="btnSalvar">
+      <button
+        id="btnSalvar"
+        style="display: none"
+        onclick="salvarQrCodeEmPng()"
+      >
+        Salvar como PNG
+      </button>
+    </div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
@@ -23,8 +32,8 @@
       referrerpolicy="no-referrer"
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"
-      integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>

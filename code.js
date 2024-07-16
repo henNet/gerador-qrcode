@@ -1,8 +1,10 @@
-function gerarQrCode() {
-  let divQrCode = document.querySelector(".qrcode");
-  let urlInput = document.querySelector("input");
-  let btnLimpar = document.querySelector("#btnLimpar");
+/* Variáveis para manipular o DOM */
+var divQrCode = document.querySelector(".qrcode");
+var urlInput = document.querySelector("input");
+var btnLimpar = document.querySelector("#btnLimpar");
+var btnSalvar = document.querySelector("#btnSalvar");
 
+function gerarQrCode() {
   divQrCode.innerHTML = "";
 
   if (urlInput.value !== "") {
@@ -11,22 +13,33 @@ function gerarQrCode() {
       text: urlInput.value,
       width: 250,
       height: 250,
-      colorDark: "#343b61",
+      // colorDark: "#343b61",
       colorLight: "#ffffff",
     });
   } else {
     alert("Campo URL vazio!");
+    return;
   }
 
   btnLimpar.disabled = false;
+  btnSalvar.style.display = "block";
 }
 
 function limparQrCode() {
-  let divQrCode = document.querySelector(".qrcode");
-  let urlInput = document.querySelector("input");
-
   divQrCode.innerHTML = "";
   urlInput.value = "";
 
   btnLimpar.disabled = true;
+  btnSalvar.style.display = "none";
+}
+
+function salvarQrCodeEmPng() {
+  const element = document.querySelector("img");
+
+  html2canvas(element).then(function (canvas) {
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = "qrcode.png";
+    link.click();
+  });
 }
