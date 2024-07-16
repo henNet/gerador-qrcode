@@ -14,16 +14,20 @@
       <button onclick="gerarQrCode()">Gerar QR-Code</button>
       <button id="btnLimpar" onclick="limparQrCode()" disabled>Limpar</button>
     </div>
-    <div class="qrcode"></div>
-    <div class="btnSalvar">
-      <button
-        id="btnSalvar"
-        style="display: none"
-        onclick="salvarQrCodeEmPng()"
-      >
-        Salvar como PNG
-      </button>
+    <div class="qrCodeContainer">
+      <div class="qrcode"></div>
+      <div class="btnSalvar">
+        <button
+          id="btnSalvar"
+          style="display: none"
+          onclick="salvarQrCodeEmPng()"
+        >
+          Salvar como PNG
+        </button>
+      </div>
     </div>
+
+    <footer>Feito com ♥ por Henrique Neto</footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
