@@ -43,3 +43,12 @@ function salvarQrCodeEmPng() {
     link.click();
   });
 }
+
+function salcarQrCode() {
+  const img = document.querySelector("img");
+  const a = document.createElement("a");
+
+  a.href = img.src;
+  a.download = "qrcode.png";
+  a.click();
+}
